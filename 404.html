@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Blueberry</title>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="assets/img/blub.png" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Blueberry">
+  <meta name="keywords" content="sieu cap bulul gaming ">
+  <meta name="author" content="Blueberry94">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="js-preloader" class="js-preloader">
+  <div align="center">
+    <center><img src="assets/img/avtloading.png"></center>
+    <span style="font-size: 17px; color: black;">CONNECTING TO HOST. . .
+    <br>LOADING DATA. . .</span>
+  </div>
+</div>
+
+<script>
+  setTimeout(function () {
+      $('.js-preloader').fadeToggle ();
+  },1500);
+</script>
+
+<!-- Notification for small viewports and landscape oriented device -->
+<div class="device-notification">
+  <a class="device-notification--logo">
+    <center><img src="assets/img/avterror.png"></center>
+  </a>
+  <p class="device-notification--message">
+    For some inconvenient reasons due to website incompatibility with
+    your screen so you cannot access the full feature
+    on site. Please use a higher resolution device for
+    better experience!
+  </p>
+</div>
+
+<!-- BG -->
+<video id="videobcg" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+  <source src="assets/img/theme.mp4" type="video/mp4">
+      Your web browser does not support background video
+</video>
+
+<!-- Head -->
+<div class="perspective effect-rotate-left">
+  <div class="container"><div class="outer-nav--return"></div>
+    <div id="viewport" class="l-viewport">
+      <div class="l-wrapper">
+        <!-- 404 -->
+        <ul class="l-main-content main-content">
+            <li class="l-section section section--is-active">
+              <div class="intro">
+                <center><img src="assets/img/avtloading.png"></center>
+                <center><img src="assets/img/404.png"></center>
+                <center><img src="assets/img/404_2.png"></center>
+                <a href="index">
+                    <center><img src="assets/img/button.png"></center>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+<!-- Additional Scripts -->
+<script async src="https://api.countapi.xyz/hit/blueberry.is-a.dev/ddafc0b3-219b-4132-ac19-654f4148f242?callback=websiteVisits"></script>
+<script src="assets/js/view.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="assets/js/functions-min.js"></script>
+<!-- Fallens Network -->
+<script>
+  function initServerData(serverIp,serverPort){
+      const serverIpElement = document.getElementById('server-ip');
+      serverIpElement.innerHTML = serverIp;
+      fetch('https://mcapi.us/server/status?ip='+serverIp+'&port='+serverPort)
+      .then(response => response.json())
+      .then(data => handleServerStatus(data));
+
+      function handleServerStatus(data){
+          if(data.status=='error'){
+              console.log(data.error);
+              return false;
+          }
+          const motd = document.getElementById("motd");
+          motd.innerHTML = data.motd;
+
+          const playerCounter = document.getElementById("player-count");
+          playerCounter.innerHTML = data.players.now;
+
+          const logo = document.getElementById("server-icon");
+          logo.src = data.favicon;
+      } 
+  }
+
+  initServerData("fallens.pw","25565");
+</script>
+</body>
+</html>
