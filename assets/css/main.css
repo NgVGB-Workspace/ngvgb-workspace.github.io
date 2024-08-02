@@ -488,6 +488,11 @@ body{
 	top:5px;
 	width:23px
 }
+@media only screen and (max-width: 768px) {
+  .header--nav-toggle {
+    display: none;
+  }
+}
 .header--cta{
 	position:absolute;
 	top:50%;
