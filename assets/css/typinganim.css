@@ -1,0 +1,52 @@
+#typing-text {
+    font-size: 34px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .typing-animation {
+    position: relative;
+  }
+  
+  .typing-animation::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: transparent;
+    animation: typing 2s steps(40, end);
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  .hide {
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+.neon {
+    color: #fff;
+    background: linear-gradient(to right, #fff, #5b5efa, #0004ff, #5b5efa, #001380);
+    background-size: 300% 100%;
+    background-position: 0% 0%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: run 3s infinite;
+}
+
+@keyframes run {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 0%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
