@@ -1,23 +1,19 @@
-var audio = document.getElementById('audio');
-var playPauseBTN = document.getElementById('playPauseBTN');
-var count = 0;
+// Get the audio element and the play/pause button
+const audio = document.getElementById('audio');
+const playPauseBTN = document.getElementById('playPauseBTN');
 
-function playPause(){
-	if(count == 0){
-		count = 1;
-		audio.play();
-		playPauseBTN.innerHTML = '<img src="assets/img/pausebtn.png">';
-	}else{
-		count = 0;
-		audio.pause();
-		playPauseBTN.innerHTML = '<img src="assets/img/playbtn.png">';
-	}
-
-}
-
-function stop(){
-	playPause()
-	audio.pause();
-	audio.currentTime = 0;
-	playPauseBTN.innerHTML = '<img src="assets/img/pausebtn.png">';
+// Define the playPause function
+function playPause() {
+  // Check if the audio is playing
+  if (audio.paused) {
+    // Play the audio
+    audio.play();
+    // Update the button icon to pause
+    playPauseBTN.innerHTML = '<img src="assets/img/pausebtn.png">';
+  } else {
+    // Pause the audio
+    audio.pause();
+    // Update the button icon to play
+    playPauseBTN.innerHTML = '<img src="assets/img/playbtn.png">';
+  }
 }
