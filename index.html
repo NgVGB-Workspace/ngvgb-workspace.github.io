@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Nguyen Bao</title>
+  <title>Nguyen Bao's Portfolio</title>
   <meta charset="utf-8">
-  <meta name='dmca-site-verification' content='NU9VQXdHQ1Q3L3JBWUV5ZEZ3OFBjQT090' />
   <link rel="shortcut icon" href="assets/img/smallshortcuticon.jpg" type="image/jpg">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,7 +13,8 @@
   <link rel="stylesheet" href="assets/css/typinganim.css">
   <link rel="stylesheet" href="music.css">
 </head>
-<body style="background-image: url('assets/img/bluebg.jpg'); background-size: cover;">
+<body style="background-image: url('assets/img/bluebg.jpg');
+background-size: cover; background-repeat: no-repeat;">
 
 <!-- Preloader -->
 <div id="js-preloader" class="js-preloader">
@@ -44,11 +44,11 @@
   </p>
 </div>
 
-<!-- BG 
+<!-- BG -->
 <video id="videobcg" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
   <source src="assets/img/safasfafafa.mp4" type="video/mp4">
       Your web browser does not support background video
-</video> -->
+</video>
 
 <!-- Head -->
 <div class="perspective effect-rotate-left">
@@ -176,33 +176,32 @@
         </ul>
       </div>
       <div class="music-player-container">
-    <div class="avatar">
-      <h1><span style="font-size: 55px;" class="neon">&lt;/&gt;</span></h1>
-    </div>
-
-    <div class="player">
-      <div class="sound-bars-lottie">
-        <div class="sound-bars"></div>
-      </div>
-
-      <div class="track-info">
-        <div style="color: white; font-size: 18px;" class="name">Lobby</div>
-        <div style="color: white; font-size: 15px;" class="artist">Snowbreak</div>
-      </div>
-
-      <div class="track-nav">
-        <audio id="audio" loop autoplay>
-          <source src="music/LobbyOST.mp3" type="audio/mpeg">
-        </audio>
-        <div id="prev" class="next-track">
-          <button id="playPauseBTN" onclick="playPause()"><img src="assets/img/pausebtn.png"></button>
+        <div class="avatar">
+          <h1><span style="font-size: 55px;" class="neon">&lt;/&gt;</span></h1>
+        </div>
+    
+        <div class="player">
+          <div class="sound-bars-lottie">
+            <div class="sound-bars"></div>
+          </div>
+    
+          <div class="track-info">
+            <div style="color: white; font-size: 18px;" class="name">Lobby</div>
+            <div style="color: white; font-size: 15px;" class="artist">Snowbreak</div>
+          </div>
+          
+          <div class="track-nav">
+            <audio id="audio" loop autoplay>
+              <source src="music/LobbyOST.mp3" type="audio/mpeg">
+            </audio>
+            <div id="prev" class="next-track">
+              <button id="playPauseBTN" onclick="playPause()"><img src="assets/img/pausebtn.png"></button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-    </div>
-  </div>
-  
   <ul class="outer-nav">
     <li class="is-active"><img src="assets/img/homebig.png"></li>
     <li><img src="assets/img/projectbig.png"></li>
