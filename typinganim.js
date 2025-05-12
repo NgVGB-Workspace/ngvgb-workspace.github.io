@@ -1,6 +1,6 @@
 const typingText = document.getElementById('typing-text');
 const cursor = document.getElementById('cursor');
-const welcomeText = 'WELCOME TO MY PORTFOLIO';
+const welcomeText = 'WELCOME TO MY WEBSITE';
 const nameText = 'HOPE YOU HAVE A WONDERFUL DAY';
 const finalText = '';
 
